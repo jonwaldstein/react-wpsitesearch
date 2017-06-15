@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       posts: [],
       selectedPost: null,
-      source_url: null
+      source_url: ''
     }
 
   }

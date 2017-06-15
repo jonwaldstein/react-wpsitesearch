@@ -7,9 +7,9 @@ const FeaturedPost = (props) => {
     return <Loader />
   }
 
-const SOURCEURL = typeof(props.selectedPost._embedded['wp:featuredmedia'][0].source_url) !== undefined ? props.selectedPost._embedded['wp:featuredmedia'][0].source_url : '';
+//const SOURCEURL = typeof(props.selectedPost._embedded['wp:featuredmedia'][0].source_url) !== undefined ? props.selectedPost._embedded['wp:featuredmedia'][0].source_url : '';
 //const THUMBNAIL_IMAGE = props.selectedPost._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url;
-const SOURCEURL_THUMBNAIL = SOURCEURL.includes('http') ? SOURCEURL : `${props.sourceUrl}${SOURCEURL}`;
+//const SOURCEURL_THUMBNAIL = SOURCEURL.includes('http') ? SOURCEURL : `${props.sourceUrl}${SOURCEURL}`;
 var the_excerpt = props.selectedPost.excerpt.rendered.replace(/(<([^>]+)>)/ig,"");
 var the_content = props.selectedPost.content.rendered.replace(/(<([^>]+)>)/ig,"");
 
@@ -18,7 +18,7 @@ var the_content = props.selectedPost.content.rendered.replace(/(<([^>]+)>)/ig,""
 
         <div className="card">
           <div className=" waves-effect waves-block waves-light">
-            <img src={SOURCEURL_THUMBNAIL} alt="" className="responsive-img activator"/>
+            {/* <img src={SOURCEURL_THUMBNAIL} alt="" className="responsive-img activator"/> */}
           </div>
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4"><h2>{props.selectedPost.title.rendered}</h2><i className="material-icons right">more_vert</i></span>
