@@ -6,7 +6,7 @@ class Search extends React.Component{
     super(props);
 
     this.state = {
-      source_url: ''
+      source_url: 'https://fishtivity.net'
     }
 
   }
@@ -17,17 +17,21 @@ class Search extends React.Component{
     });
     this.props.onSearchInput(url);
   }
+  onInputChange(url){
+    this.setState({
+      source_url: url
+    });
+    this.props.onSearchInput(url);
+  }
 
 
   render(){
     return(
-      <form onSubmit={event => this.onInputSubmit(this.state.source_url)}>
         <div className="input-field">
-          <input id="search" type="search" required value={this.state.source_url} onChange={(event => this.setState({source_url: event.target.value}))} />
+          <input id="search" type="search" required value={this.state.source_url} onChange={(event => this.onInputChange(event.target.value))} />
           <label className="label-icon" for="search"><i className="material-icons">search</i></label>
           <i className="material-icons">close</i>
         </div>
-      </form>
     );
   }
 }

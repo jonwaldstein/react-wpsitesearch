@@ -1,0 +1,16 @@
+.App {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+.inner-wrap {
+   flex: 1 0 auto;
+ }
+footer{
+  padding: 25px 0;
+}
+
+.m-b-0{
+  margin-bottom: 0px;
+}

@@ -9,9 +9,13 @@ const PostList = (props) => {
 
   return (
     <div className="col s12 m5">
-      <div className="collection">
-        {listOfPosts}
-      </div>
+      {!props.isLoading ? (
+        <div className="collection">
+          {listOfPosts}
+        </div>
+      ) : null}
+
+
     </div>
   );
 
